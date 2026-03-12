@@ -27,7 +27,12 @@ mix
     )
     .scripts(
         [
-            'resources/assets/js/jquery-2.2.3.min.js',
+            'resources/assets/js/jquery-2.2.3.min.js'
+        ],
+        'public/js/jquery.min.js'
+    )
+    .scripts(
+        [
             'node_modules/bootstrap/dist/js/bootstrap.js',
             'node_modules/select2/dist/js/select2.js',
             'node_modules/datatables/media/js/jquery.dataTables.js',
@@ -40,6 +45,8 @@ mix
             'node_modules/bootstrap/dist/css/bootstrap.css',
             'node_modules/font-awesome/css/font-awesome.css',
             'node_modules/select2/dist/css/select2.css',
+            'node_modules/owl.carousel/dist/assets/owl.carousel.css',
+            'node_modules/owl.carousel/dist/assets/owl.theme.default.css',
             'resources/assets/css/drift-basic.min.css',
             'resources/assets/css/front.css'
         ],
@@ -56,6 +63,7 @@ mix
     )
     .copyDirectory('node_modules/datatables/media/images', 'public/images')
     .copyDirectory('node_modules/font-awesome/fonts', 'public/fonts')
+    .copyDirectory('node_modules/ionicons/dist/fonts', 'public/fonts')
     .copyDirectory('resources/assets/admin-lte/img', 'public/img')
     .copyDirectory('resources/assets/images', 'public/images')
     .copy('resources/assets/js/scripts.js', 'public/js/scripts.js')

@@ -1,4 +1,3 @@
-version: '3'
 services:
   app:
     build: .
@@ -8,12 +7,25 @@ services:
     environment:
       SERVICE_NAME: app-api
       SERVICE_TAGS: dev
+      COMPOSER_ALLOW_SUPERUSER: 1
+      APP_URL: http://localhost:8000
     working_dir: /var/www
     volumes:
       - ./project:/var/www
       - ./php/local.ini:/usr/local/etc/php/conf.d/local.ini
+      - vendor-data:/var/www/vendor
+      - node-modules-data:/var/www/node_modules
+      - public-css:/var/www/public/css
+      - public-js:/var/www/public/js
+      - public-fonts:/var/www/public/fonts
+      - public-img:/var/www/public/img
+      - public-images:/var/www/public/images
     networks:
       - app-network
+    depends_on:
+      - mailhog
+      - db
+
   webserver:
     image: nginx:alpine
     container_name: webserver
@@ -24,8 +36,16 @@ services:
     volumes:
       - ./project:/var/www
       - ./nginx/conf.d/:/etc/nginx/conf.d/
+      - public-css:/var/www/public/css
+      - public-js:/var/www/public/js
+      - public-fonts:/var/www/public/fonts
+      - public-img:/var/www/public/img
+      - public-images:/var/www/public/images
     networks:
       - app-network
+    depends_on:
+      - app
+
   db:
     image: mysql:5.7
     container_name: db
@@ -36,6 +56,7 @@ services:
     environment:
       MYSQL_DATABASE: homestead
       MYSQL_USER: homestead
+      MYSQL_PASSWORD: secret
       MYSQL_ROOT_PASSWORD: secret
       SERVICE_TAGS: dev
       SERVICE_NAME: mysql
@@ -43,9 +64,11 @@ services:
       - ./dbdata:/var/lib/mysql
     networks:
       - app-network
+
   mailhog:
-    build: ./mailhog
+    image: mailhog/mailhog:latest
     container_name: mailhog
+    restart: unless-stopped
     tty: true
     ports:
       - "8025:8025"
@@ -57,9 +80,16 @@ services:
       - ./mails:/home/mailhog/mails
     networks:
       - app-network
+
 networks:
   app-network:
     driver: bridge
+
 volumes:
-  dbdata:
-    driver: local
+  vendor-data:
+  node-modules-data:
+  public-css:
+  public-js:
+  public-fonts:
+  public-img:
+  public-images:

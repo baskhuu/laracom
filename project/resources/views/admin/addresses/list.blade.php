@@ -26,7 +26,13 @@
                         <tbody>
                         @foreach ($addresses as $address)
                             <tr>
-                                <td><a href="{{ route('admin.customers.show', [$address->customer_id]) }}">{{ $address->alias }}</a></td>
+                                <td>
+                                    @if($address->customer_id)
+                                        <a href="{{ route('admin.customers.show', [$address->customer_id]) }}">{{ $address->alias }}</a>
+                                    @else
+                                        {{ $address->alias }}
+                                    @endif
+                                </td>
                                 <td>{{ $address->address_1 }}</td>
                                 <td>{{ $address->country }}</td>
                                 <td>{{ $address->province }}</td>

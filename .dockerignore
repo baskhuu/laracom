@@ -1,0 +1,14 @@
+project/vendor
+project/node_modules
+project/.env
+project/public/storage
+project/storage/framework/cache/data/*
+project/storage/framework/sessions/*
+project/storage/framework/views/*.php
+project/storage/logs/*.log
+.git
+.github
+dbdata
+mails
+node_modules
+vendor

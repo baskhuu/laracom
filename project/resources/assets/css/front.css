@@ -1,5 +1,4 @@
 
-
 /* **************************************************
 Theme Name: Kenakata
 Theme URI: https://www.behance.net/gallery/38757389/Kenakata-Free-eCommerce-Bootstrap-Template-PSD-HTML
@@ -14,8 +13,10 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 
 
+/*
 @import url(css/font-awesome.min.css) screen;
 @import url(css/owl.carousel.css) screen;
+*/
 @import url(https://fonts.googleapis.com/css?family=Muli:400,300,300italic,400italic);
 @import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700);
 
@@ -657,3 +658,4 @@ a:hover img {
 #productAttribute {
     width: 312px;
 }
+img { max-width: 100% !important; height: auto !important; }

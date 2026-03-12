@@ -33,6 +33,7 @@ trait AddressTransformable
         $obj->address_2 = $address->address_2;
         $obj->zip = $address->zip;
         $obj->city = $address->city;
+        $obj->customer_id = $address->customer_id;
 
         if (isset($address->province_id)) {
             $provinceRepo = new ProvinceRepository(new Province);
