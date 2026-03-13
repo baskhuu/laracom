@@ -45,9 +45,11 @@ trait AddressTransformable
         $country = $countryRepo->findCountryById($address->country_id);
         $obj->country = $country->name;
 
-        $customerRepo = new CustomerRepository(new Customer);
-        $customer = $customerRepo->findCustomerById($address->customer_id);
-        $obj->customer = $customer->name;
+        if ($address->customer_id) {
+            $customerRepo = new CustomerRepository(new Customer);
+            $customer = $customerRepo->findCustomerById($address->customer_id);
+            $obj->customer = $customer->name;
+        }
         $obj->status = $address->status;
 
         return $obj;

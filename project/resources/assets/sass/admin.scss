@@ -1,0 +1,63 @@
+// =========================================================
+// Admin カスタムスタイル
+// Bootstrap 3 Sass 変数を活用
+// =========================================================
+
+@import "variables";
+
+// ---------------------------------------------------------
+// 検索ボタン
+// $admin-border / $admin-purple を変数で参照
+// ---------------------------------------------------------
+#search-btn {
+    border: 1px solid $admin-border;
+
+    &:hover {
+        background: $admin-purple;
+        color: #eee;
+    }
+}
+
+#admin-search {
+    margin-bottom: 15px;
+}
+
+// ---------------------------------------------------------
+// タブコンテンツ
+// $admin-border を使用
+// ---------------------------------------------------------
+.tab-content > .tab-pane {
+    border: 1px solid $admin-border;
+    padding: 15px;
+    border-top: none;
+}
+
+// ---------------------------------------------------------
+// DataTables ボーダー調整
+// AdminLTE 2.x のデザインに合わせてヘッダーボーダーを除去
+// ---------------------------------------------------------
+table.dataTable {
+    thead td,
+    tfoot td,
+    thead th {
+        border-bottom: none;
+    }
+
+    &.no-footer {
+        border-bottom: none;
+    }
+}
+
+// ---------------------------------------------------------
+// チェックボックスリスト
+// カテゴリ等の階層選択で使用
+// ---------------------------------------------------------
+.checkbox-list {
+    list-style-type: none;
+    padding-left: 0;
+
+    ul {
+        list-style-type: none;
+        padding-left: 25px;
+    }
+}

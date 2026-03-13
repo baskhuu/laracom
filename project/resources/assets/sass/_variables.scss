@@ -1,27 +1,32 @@
 
+// =========================================================
+// Bootstrap 3 Sass 変数（カスタムオーバーライド）
+// bootstrap-sass の変数をここで上書きする
+// =========================================================
+
 // Body
 $body-bg: #f5f8fa;
 
 // Borders
-$laravel-border-color: darken($body-bg, 10%);
-$list-group-border: $laravel-border-color;
-$navbar-default-border: $laravel-border-color;
-$panel-default-border: $laravel-border-color;
-$panel-inner-border: $laravel-border-color;
+$laravel-border-color:   darken($body-bg, 10%);
+$list-group-border:      $laravel-border-color;
+$navbar-default-border:  $laravel-border-color;
+$panel-default-border:   $laravel-border-color;
+$panel-inner-border:     $laravel-border-color;
 
-// Brands
-$brand-primary: #3097D1;
-$brand-info: #8eb4cb;
-$brand-success: #2ab27b;
-$brand-warning: #cbb956;
-$brand-danger: #bf5329;
+// Brands (Bootstrap 3 標準変数)
+$brand-primary:   #3097D1;
+$brand-info:      #8eb4cb;
+$brand-success:   #2ab27b;
+$brand-warning:   #cbb956;
+$brand-danger:    #bf5329;
 
 // Typography
-$icon-font-path: "~bootstrap-sass/assets/fonts/bootstrap/";
-$font-family-sans-serif: "Raleway", sans-serif;
-$font-size-base: 14px;
-$line-height-base: 1.6;
-$text-color: #636b6f;
+$icon-font-path:          "~bootstrap-sass/assets/fonts/bootstrap/";
+$font-family-sans-serif:  "Raleway", sans-serif;
+$font-size-base:          14px;
+$line-height-base:        1.6;
+$text-color:              #636b6f;
 
 // Navbar
 $navbar-default-bg: #fff;
@@ -30,9 +35,27 @@ $navbar-default-bg: #fff;
 $btn-default-color: $text-color;
 
 // Inputs
-$input-border: lighten($text-color, 40%);
-$input-border-focus: lighten($brand-primary, 25%);
-$input-color-placeholder: lighten($text-color, 30%);
+$input-border:             lighten($text-color, 40%);
+$input-border-focus:       lighten($brand-primary, 25%);
+$input-color-placeholder:  lighten($text-color, 30%);
 
 // Panels
 $panel-default-heading-bg: #fff;
+
+// =========================================================
+// AdminLTE 2.x テーマ変数
+// =========================================================
+$admin-purple:        #605ca8;   // AdminLTE skin-purple のアクセントカラー
+$admin-purple-dark:   #4b4899;   // ホバー時など
+$admin-border:        #d2d6de;   // AdminLTE 標準ボーダー色
+$admin-sidebar-bg:    #222d32;   // サイドバー背景
+$admin-sidebar-link:  #b8c7ce;   // サイドバーリンク色
+$admin-box-bg:        #fff;      // ボックス背景
+
+// =========================================================
+// フロントエンド変数
+// =========================================================
+$brand-gold:       #d89522;   // フロントエンド アクセントカラー
+$front-dark:       #222;
+$front-text:       #52575d;
+$front-muted:      #919191;

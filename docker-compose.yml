@@ -15,11 +15,6 @@ services:
       - ./php/local.ini:/usr/local/etc/php/conf.d/local.ini
       - vendor-data:/var/www/vendor
       - node-modules-data:/var/www/node_modules
-      - public-css:/var/www/public/css
-      - public-js:/var/www/public/js
-      - public-fonts:/var/www/public/fonts
-      - public-img:/var/www/public/img
-      - public-images:/var/www/public/images
     networks:
       - app-network
     depends_on:
@@ -36,11 +31,6 @@ services:
     volumes:
       - ./project:/var/www
       - ./nginx/conf.d/:/etc/nginx/conf.d/
-      - public-css:/var/www/public/css
-      - public-js:/var/www/public/js
-      - public-fonts:/var/www/public/fonts
-      - public-img:/var/www/public/img
-      - public-images:/var/www/public/images
     networks:
       - app-network
     depends_on:
@@ -88,8 +78,3 @@ networks:
 volumes:
   vendor-data:
   node-modules-data:
-  public-css:
-  public-js:
-  public-fonts:
-  public-img:
-  public-images:

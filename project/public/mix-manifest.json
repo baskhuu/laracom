@@ -1,6 +1,7 @@
 {
+    "/css/front-theme.css": "/css/front-theme.css",
+    "/css/admin-theme.css": "/css/admin-theme.css",
     "/css/admin.min.css": "/css/admin.min.css",
-    "/js/jquery.min.js": "/js/jquery.min.js",
     "/js/admin.min.js": "/js/admin.min.js",
     "/css/style.min.css": "/css/style.min.css",
     "/js/front.min.js": "/js/front.min.js",
