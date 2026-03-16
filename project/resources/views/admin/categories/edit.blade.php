@@ -24,7 +24,8 @@
                     </div>
                     <div class="form-group">
                         <label for="description">Description </label>
-                        <textarea class="form-control ckeditor" name="description" id="description" rows="5" placeholder="Description">{!! $category->description ?: old('description')  !!}</textarea>
+                        <input id="description" type="hidden" name="description" value="{{ $category->description ?: old('description') }}">
+                        <trix-editor input="description"></trix-editor>
                     </div>
                     @if(isset($category->cover))
                     <div class="form-group">

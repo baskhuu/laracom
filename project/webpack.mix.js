@@ -29,6 +29,7 @@ mix
             'resources/assets/admin-lte/css/AdminLTE.min.css',
             'resources/assets/admin-lte/css/skins/skin-purple.min.css',
             'node_modules/datatables/media/css/jquery.dataTables.css',
+            'node_modules/trix/dist/trix.css',                          // Trix エディタ
             'public/css/admin-theme.css',                               // Sass コンパイル済み
         ],
         'public/css/admin.min.css'
@@ -45,6 +46,7 @@ mix
             'node_modules/select2/dist/js/select2.js',                  // ③ Select2
             'node_modules/datatables/media/js/jquery.dataTables.js',    // ④ DataTables
             'resources/assets/admin-lte/js/app.js',                     // ⑤ AdminLTE 2.x
+            'node_modules/trix/dist/trix.umd.js',                       // ⑥ Trix エディタ
         ],
         'public/js/admin.min.js'
     )

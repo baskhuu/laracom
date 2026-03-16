@@ -33,7 +33,8 @@
                                             </div>
                                             <div class="form-group">
                                                 <label for="description">Description </label>
-                                                <textarea class="form-control ckeditor" name="description" id="description" rows="5" placeholder="Description">{!! $product->description  !!}</textarea>
+                                                <input id="description" type="hidden" name="description" value="{{ $product->description }}">
+                                                <trix-editor input="description"></trix-editor>
                                             </div>
                                             @if(!is_null($product->cover))
                                             <div class="form-group">

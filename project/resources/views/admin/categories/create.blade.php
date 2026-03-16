@@ -23,7 +23,8 @@
                     </div>
                     <div class="form-group">
                         <label for="description">Description </label>
-                        <textarea class="form-control ckeditor" name="description" id="description" rows="5" placeholder="Description">{{ old('description') }}</textarea>
+                        <input id="description" type="hidden" name="description" value="{{ old('description') }}">
+                        <trix-editor input="description"></trix-editor>
                     </div>
                     <div class="form-group">
                         <label for="cover">Cover </label>
