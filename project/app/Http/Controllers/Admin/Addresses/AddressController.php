@@ -72,6 +72,7 @@ class AddressController extends Controller
     public function create()
     {
         $countries = $this->countryRepo->listCountries();
+        // TODO: Fix the MagicNumber!
         $country = $this->countryRepo->findCountryById(1);
 
         $customers = $this->customerRepo->listCustomers();

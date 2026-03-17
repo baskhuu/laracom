@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(code --list-extensions)",
+      "Bash(xargs grep:*)",
+      "Bash(mysql -h 127.0.0.1 -P 3306 -u homestead -psecret homestead -e \"SHOW TABLES;\")"
+    ]
+  }
+}

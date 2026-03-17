@@ -62,7 +62,8 @@ class CustomerAddressController extends Controller
      */
     public function edit(int $customerId, int $addressId)
     {
-        $this->countryRepo->findCountryById(env('COUNTRY_ID', 1));
+        $this->countryRepo->findCountryById(env('COUNTRY_ID', 1)); // TODO: Fix the MagicNumber!
+        // TODO: Fix the MagicNumber!
         $province = $this->provinceRepo->findProvinceById(1);
 
         return view('admin.addresses.customers.edit', [

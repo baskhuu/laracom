@@ -36,7 +36,7 @@
                                                 <input id="description" type="hidden" name="description" value="{{ $product->description }}">
                                                 <trix-editor input="description"></trix-editor>
                                             </div>
-                                            @if(!is_null($product->cover))
+                                            @if(!empty($product->cover))
                                             <div class="form-group">
                                                 <div class="col-md-3">
                                                     <div class="row">

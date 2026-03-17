@@ -25,6 +25,7 @@
         @endif
     </td>
 </tr>
+@push('scripts')
     <script src="{{ url('https://checkout.stripe.com/checkout.js') }}"></script>
     <script type="text/javascript">
 
@@ -62,3 +63,4 @@
             });
         });
     </script>
+@endpush

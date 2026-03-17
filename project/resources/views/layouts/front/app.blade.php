@@ -18,6 +18,8 @@
     <meta name="description" content="Modern open-source e-commerce framework for free">
     <meta name="tags" content="modern, opensource, open-source, e-commerce, framework, free, laravel, php, php7, symfony, shop, shopping, responsive, fast, software, blade, cart, test driven, adminlte, storefront">
     <meta name="author" content="Jeff Simons Decena">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Muli:400,300,300italic,400italic">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
     <link href="{{ asset('css/style.min.css') }}" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -103,6 +105,7 @@
 
 <script src="{{ asset('js/front.min.js') }}"></script>
 <script src="{{ asset('js/custom.js') }}"></script>
+@stack('scripts')
 @yield('js')
 </body>
 </html>

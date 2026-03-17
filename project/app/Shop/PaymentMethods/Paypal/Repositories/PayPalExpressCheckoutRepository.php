@@ -112,10 +112,10 @@ class PayPalExpressCheckoutRepository implements PayPalExpressCheckoutRepository
             $checkoutRepo = new CheckoutRepository;
             $checkoutRepo->buildCheckoutItems([
                 'reference' => Uuid::uuid4()->toString(),
-                'courier_id' => 1,
+                'courier_id' => 1, // TODO: Fix the MagicNumber!
                 'customer_id' => $request->user()->id,
                 'address_id' => $request->input('billing_address'),
-                'order_status_id' => 1,
+                'order_status_id' => 1, // TODO: Fix the MagicNumber!
                 'payment' => $request->input('payment'),
                 'discounts' => 0,
                 'total_products' => $cartRepo->getSubTotal(),

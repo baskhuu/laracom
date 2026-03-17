@@ -27,7 +27,7 @@
                         <input id="description" type="hidden" name="description" value="{{ $category->description ?: old('description') }}">
                         <trix-editor input="description"></trix-editor>
                     </div>
-                    @if(isset($category->cover))
+                    @if(!empty($category->cover))
                     <div class="form-group">
                         <img src="{{ asset("storage/$category->cover") }}" alt="" class="img-responsive"> <br/>
                         <a onclick="return confirm('Are you sure?')" href="{{ route('admin.category.remove.image', ['category' => $category->id]) }}" class="btn btn-danger">Remove image?</a>

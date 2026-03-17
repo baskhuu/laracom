@@ -26,6 +26,16 @@
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="{{ asset('favicons/ms-icon-144x144.png')}}">
     <meta name="theme-color" content="#ffffff">
+    <script>
+        document.addEventListener('error', function(e) {
+            if (e.target.tagName === 'IMG') {
+                var span = document.createElement('span');
+                span.className = 'img-broken';
+                span.innerHTML = '<i class="fa fa-exclamation-triangle"></i> 画像取得に失敗';
+                e.target.parentNode.replaceChild(span, e.target);
+            }
+        }, true);
+    </script>
 </head>
 <body class="hold-transition skin-purple sidebar-mini">
 <noscript>

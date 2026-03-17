@@ -202,6 +202,7 @@
 
         $(document).ready(function () {
 
+            // TODO: Fix the MagicNumber!
             if (countryId === 226) {
                 findUsStates(countryId);
             } else {
@@ -220,6 +221,7 @@
 
             $('#province_id').on('change', function () {
                 provinceId = $(this).val();
+                // TODO: Fix the MagicNumber!
                 if (countryId === 226) {
                     findUsStates(countryId);
                 } else {

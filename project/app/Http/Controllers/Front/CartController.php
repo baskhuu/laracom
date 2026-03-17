@@ -61,6 +61,7 @@ class CartController extends Controller
      */
     public function index()
     {
+        // TODO: Fix the MagicNumber!
         $courier = $this->courierRepo->findCourierById(request()->session()->get('courierId', 1));
         $shippingFee = $this->cartRepo->getShippingFee($courier);
 

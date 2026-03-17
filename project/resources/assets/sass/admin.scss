@@ -61,3 +61,45 @@ table.dataTable {
         padding-left: 25px;
     }
 }
+
+// ---------------------------------------------------------
+// テーブル内 Action btn-group 修正
+// form-horizontal 内でフロート崩れが発生するため
+// flexbox で横並びを強制し、RoundedEdge を正しく維持する
+// ---------------------------------------------------------
+.form-horizontal .btn-group {
+    display: inline-flex;
+
+    > .btn {
+        float: none;
+    }
+}
+
+// ---------------------------------------------------------
+// 画像読み込み失敗プレースホルダー
+// ---------------------------------------------------------
+.img-broken {
+    display: inline-block;
+    padding: 4px 8px;
+    background: #fff3cd;
+    border: 1px solid #ffc107;
+    border-radius: 3px;
+    color: #856404;
+    font-size: 12px;
+}
+
+// ---------------------------------------------------------
+// カバー画像サムネイル（一覧テーブル）
+// ---------------------------------------------------------
+.table td {
+    vertical-align: middle;
+}
+
+.table td img {
+    max-height: 60px;
+    max-width: 100px;
+    height: auto;
+    width: auto;
+    object-fit: contain;
+    display: block;
+}

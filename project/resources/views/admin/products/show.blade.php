@@ -24,7 +24,7 @@
                                 <td>{{ $product->name }}</td>
                                 <td>{{ $product->description }}</td>
                                 <td>
-                                    @if(isset($product->cover))
+                                    @if(!empty($product->cover))
                                         <img src="{{ asset("storage/$product->cover") }}" class="img-responsive" alt="">
                                     @endif
                                 </td>

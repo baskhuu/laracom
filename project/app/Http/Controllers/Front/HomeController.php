@@ -29,11 +29,13 @@ class HomeController
      */
     public function index()
     {
+        // TODO: Fix the MagicNumber!
         $cat1 = $this->categoryRepo->findCategoryById(2);
         $cat1->products = $cat1->products->map(function (Product $item) {
             return $this->transformProduct($item);
         });
 
+        // TODO: Fix the MagicNumber!
         $cat2 = $this->categoryRepo->findCategoryById(3);
         $cat2->products = $cat2->products->map(function (Product $item) {
             return $this->transformProduct($item);

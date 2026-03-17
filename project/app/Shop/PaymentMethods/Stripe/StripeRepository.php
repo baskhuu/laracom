@@ -50,10 +50,10 @@ class StripeRepository
                 $checkoutRepo = new CheckoutRepository;
                 $checkoutRepo->buildCheckoutItems([
                     'reference' => Uuid::uuid4()->toString(),
-                    'courier_id' => 1,
+                    'courier_id' => 1, // TODO: Fix the MagicNumber!
                     'customer_id' => $this->customer->id,
                     'address_id' => $data['billing_address'],
-                    'order_status_id' => 1,
+                    'order_status_id' => 1, // TODO: Fix the MagicNumber!
                     'payment' => strtolower(config('stripe.name')),
                     'discounts' => 0,
                     'total_products' => $total,
